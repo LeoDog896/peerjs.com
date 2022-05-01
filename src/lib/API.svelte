@@ -7,7 +7,13 @@
 
 <div class="{top ? "toplevel" : "child"}" id={doc.name}>
   <span class="name">
-    <a href="#{doc.name}">{doc.name}</a>
+    <a href="#{doc.name}">
+      {#if doc.name.startsWith("[")}
+        <span class="bracket">[</span>{doc.name.substring(1).slice(0, -1)}<span class="bracket">]</span>
+      {:else}
+        {doc.name}
+      {/if}
+    </a>
     {#each doc.tags as tag}
       <span class="tag" style="background-color: {TagType[tag]};">{tag}</span>
     {/each}
