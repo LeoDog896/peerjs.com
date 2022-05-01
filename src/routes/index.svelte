@@ -24,25 +24,19 @@
 
     <h2>Setup</h2>
     <h4>Include the library</h4>
-    <pre>
-  &lt;script src="https://unpkg.com/peerjs@{version}/dist/peerjs.min.js"&gt;&lt;/script&gt;
-  </pre>
+    <pre>&lt;script src="https://unpkg.com/peerjs@{version}/dist/peerjs.min.js"&gt;&lt;/script&gt;</pre>
 
     <h4>Create a peer</h4>
-    <pre>
-  var peer = new Peer();
-  </pre>
+    <pre>var peer = new Peer();</pre>
 
     <h2>Data connections</h2>
     <h4>Connect</h4>
-    <pre>{`
-  var conn = peer.connect('another-peers-id');
-  // on open will be launch when you successfully connect to PeerServer
-  conn.on('open', function(){
-    // here you have conn.id
-    conn.send('hi!');
-  });`}
-  </pre>
+    <pre>{`var conn = peer.connect('another-peers-id');
+// on open will be launch when you successfully connect to PeerServer
+conn.on('open', function(){
+  // here you have conn.id
+  conn.send('hi!');
+});`}</pre>
     <h4>Receive</h4>
     <pre>{`
   peer.on('connection', function(conn) {

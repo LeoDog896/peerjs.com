@@ -12,9 +12,7 @@
   <h2>Setup</h2>
   <h3>1. Include the Javascript client</h3>
   <p>Add the PeerJS client library to your webpage.</p>
-  <pre>
-&lt;script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"&gt;&lt;/script&gt;</pre
-  >
+  <pre>&lt;script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"&gt;&lt;/script&gt;</pre>
   <p>
     If you prefer, you can host it yourself:
     <a download href="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"
@@ -36,9 +34,8 @@
 
   <h2>Usage</h2>
   <p>Every Peer object is assigned a random, unique ID when it's created.</p>
-  <pre>
-peer.on('open', function(id) {'{'}
-console.log('My peer ID is: ' + id);
+  <pre>peer.on('open', function(id) {'{'}
+    &nbsp;console.log('My peer ID is: ' + id);
 });</pre>
   <p>
     When we want to connect to another peer, we'll need to know their peer id.
@@ -67,7 +64,7 @@ console.log('My peer ID is: ' + id);
       <pre>var conn = peer.connect('dest-peer-id');</pre>
     </div>
     <div class="col">
-      <pre>peer.on('connection', function(conn) {'{'} ...{'}'});</pre>
+      <pre>peer.on('connection', function(conn) {'{'} ... {'}'});</pre>
     </div>
     <div class="clear"></div>
   </div>
@@ -79,13 +76,13 @@ console.log('My peer ID is: ' + id);
   </p>
   <pre>
 conn.on('open', function() {'{'}
-// Receive messages
-conn.on('data', function(data) {'{'}
-  console.log('Received', data);
-});
+&nbsp;// Receive messages
+&nbsp;conn.on('data', function(data) {'{'}
+&nbsp;&nbsp;console.log('Received', data);
+&nbsp;});
 
-// Send messages
-conn.send('Hello!');
+&nbsp;// Send messages
+&nbsp;conn.send('Hello!');
 });</pre
   >
   <p>

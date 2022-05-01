@@ -1,12 +1,17 @@
 <script lang="ts">
   import Default from "./default.svelte";
+
+  // any contributor that may stumble upon this array, please add your own favorite things.
+  const tagList = ["rice", "hotdogs"]
+
+  $: randomTag = tagList[Math.floor(Math.random() * tagList.length)];
 </script>
 
 <Default>
   <div id="team">
     <h2>The peering team</h2>
     <p>We're more excited about WebRTC and peer-to-peer communication in the browser than about
-      <span class="random_tagline"></span>.</p>
+      <span class="random_tagline">{randomTag}</span>.</p>
     <br>
     <div class="person">
       <div class="img" id="michelle"></div>

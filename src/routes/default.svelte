@@ -1,7 +1,7 @@
 <script>
+	import '../lato.css';
 	import '../app.css';
 	import '../button.css';
-	import '../lato.css';
 	import '../style.css';
 	import 'github-fork-ribbon-css/gh-fork-ribbon.css';
 </script>
