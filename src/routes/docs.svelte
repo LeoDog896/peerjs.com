@@ -1057,24 +1057,6 @@
     font-size: 12px;
     padding: 2px;
   }
-
-  .start > .two-col {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .two-col .col {
-    float: left;
-    width: 50%;
-  }
-
-  .two-col .col.col-header {
-    font-weight: 600;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .clear {
     clear: both;
   }
